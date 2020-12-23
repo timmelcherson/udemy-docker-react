@@ -13,4 +13,6 @@ RUN npm run build
 # A new FROM statement will automatically act as a terminator for the first block when it completes.
 FROM nginx
 
+EXPOSE 80
+
 COPY --from=0 /app/build /usr/share/nginx/html
